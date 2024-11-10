@@ -1,0 +1,106 @@
+ .section {
+     width: 100%;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     background-color: #0c0c0c;
+     z-index: 1;
+     position: relative;
+     flex-direction: column;
+     padding: 2.5rem 0;
+ }
+
+ .section>:nth-child(1) {
+     font-family: monument extended;
+     color: #fff;
+     font-size: 2.5rem;
+     text-align: center;
+     margin-bottom: 4rem;
+     z-index: 1;
+ }
+
+ .active {
+     background-color: #03ecbe !important;
+     color: #fff !important;
+     border-color: #fff !important;
+ }
+
+ .active:hover {
+     color: #fff;
+ }
+
+ .visible {
+     display: flex !important;
+     flex-direction: column !important;
+     align-items: start !important;
+     justify-content: center !important;
+ }
+
+ .about {
+     /* flex items-center w-[74%] h-[55vh] items-center justify-between */
+     display: flex;
+     align-items: center;
+     width: 74%;
+     height: 55vh;
+     justify-content: space-between;
+ }
+
+ .about_wrapper {
+     /* 'flex flex-col items-center justify-between w-[22%] h-[100%] z-10' */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     width: 22%;
+     height: 100%;
+     z-index: 10;
+ }
+
+ .about_wrapper span {
+     /* flex w-[80%] h-[3.75rem] bg-[#0a0a0a] z-10 items-center justify-center text-[1.3rem] 
+    hover:text-[#04ffc3] euro text-['monument extended'] text-white rounded-[8px] border-2 border-[#04ffce] */
+     display: flex;
+     width: 80%;
+     height: 3.75rem;
+     background-color: #0a0a0a;
+     z-index: 10;
+     align-items: center;
+     justify-content: center;
+     font-size: 1.3rem;
+     font-family: euro;
+     color: #fff;
+     border-radius: 8px;
+     border: 2px solid #04ffce;
+
+ }
+
+ .about_wrapper span:hover {
+     color: #04ffce;
+ }
+
+ .text_container {
+     /* w-[72%] h-[100%] 
+    text-white rounded-[8px] border-2 border-[#04ffce]  shadow-[0_0_0_500px] shadow-[#0b0b0b] overflow-scroll overflow-x-hidden */
+     width: 72%;
+     height: 100%;
+     color: #fff;
+     border-radius: 8px;
+     border: 2px solid #04ffce;
+     box-shadow: 0 0 0 500px #0b0b0b;
+     overflow: scroll;
+     overflow-x: hidden;
+ }
+
+ .text_box {
+     /* text-center hidden flex-col flex h-[100%] px-8 border-b-2 items-start
+     */
+     text-align: start;
+     height: 100%;
+     display: none;
+     flex-direction: column;
+     padding: 0 32px;
+     border-bottom: 2px;
+     align-items: flex-start;
+ }
