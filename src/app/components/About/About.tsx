@@ -4,10 +4,10 @@ import Style from "./about.module.css"
 import { useState } from 'react'
 
 function About() {
-  let [count, setCount] = useState(0)
+  const [count, setCount] = useState(0)
 
-  function incrementCount(num) {
-    setCount(prev => count = num)
+  function incrementCount(num:number) {
+    setCount(prev => prev = num)
   }
 
 
@@ -23,7 +23,7 @@ function About() {
         </div>
         <div className={Style.text_container}>
           <div className={` ${Style.text_box} ${Style[count % 4 == 0 ? 'visible' : '']}`}>
-            <p className='text-white text-[1.3rem] font-[inter] my-2 leading-10'>I'm Raed Siddiquie, a passionate rising Web Developer seeking to get an opportunity where I can make the
+            <p className='text-white text-[1.3rem] font-[inter] my-2 leading-10'>I&#39;m Raed Siddiquie, a passionate rising Web Developer seeking to get an opportunity where I can make the
               best of my potential and contribute to the organizations growth, while
               polishing my skills.I have strong base in Html, Css and Javascript and currently learning latest web technologies</p>
           </div>
