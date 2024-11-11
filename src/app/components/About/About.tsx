@@ -7,6 +7,7 @@ function About() {
   const [count, setCount] = useState(0)
 
   function incrementCount(num:number) {
+    // eslint-disable-next-line
     setCount(prev => prev = num)
   }
 
