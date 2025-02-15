@@ -1,100 +1,142 @@
- .section {
+.section {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color:var(--primary-color);
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .skillsform {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--primary-color);
+    flex-direction: column;
     align-items: center;
-
-
-
+    width: 100%;
+    max-width: 1200px;
+    background-color: var(--primary-color);
+    padding: 20px;
+    box-sizing: border-box;
 }
-.headform{
-    height: 80vh;
+
+.headform {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .headform h1 {
-    margin-top: 50px;
-    font-size: 30px;
+    font-size: 24px;
     color: var(--secondary-font-color);
     font-family: var(--primary-text);
     letter-spacing: 2px;
+    margin: 0;
+}
 
-} 
-
- .headform h2 {
+.headform h2 {
     color: var(--neon-color);
-    font-family: monument extended;
-    font-size: 3.25rem;
+    font-family: 'monument extended', sans-serif;
+    font-size: 2.5rem;
     letter-spacing: 1.2px;
-} 
+    margin: 10px 0;
+}
 
- .skillsform form {
-
-    width: 40vw;
-    height: fit-content;
-} 
-
- .skillsform input[type=text] {
+.skillsform form {
     width: 100%;
-    padding:10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 15px;
-} 
+    max-width: 500px;
+}
 
- 
+.skillsform input[type=text],
 .skillsform textarea {
-    height: 100px;
     width: 100%;
-    padding: 15px;
+    padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 15px;
-} 
+    font-size: 16px;
+}
 
- .skillsform input[type=submit] {
+.skillsform textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.skillsform input[type=submit] {
     padding: 10px;
-    width: 100px;
+    width: 100%;
+    max-width: 150px;
     border-radius: 22px;
     background-color: var(--neon-color);
     color: var(--primary-font-color);
     font-size: 18px;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
     border: 2px solid #019975;
-} 
- .skillsform input[type=submit]:hover{
+    cursor: pointer;
+}
+
+.skillsform input[type=submit]:hover {
     border: 2px solid #fff;
     background-color: #019975;
 }
 
 .skillsform input[type=file] {
     display: none;
-} 
+}
 
- .fileicon {
+.fileicon {
     font-family: var(--primary-text);
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 12px;
     color: #fff;
     cursor: pointer;
     width: 100%;
     margin: 10px 0;
-} 
- 
+    text-align: center;
+}
+
 .fileicon span {
     color: #fff;
-} 
+    margin-right: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .headform h1 {
+        font-size: 20px;
+    }
+
+    .headform h2 {
+        font-size: 2rem;
+    }
+
+    .skillsform input[type=submit] {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .headform h1 {
+        font-size: 18px;
+    }
+
+    .headform h2 {
+        font-size: 1.5rem;
+    }
+
+    .skillsform input[type=text],
+    .skillsform textarea {
+        font-size: 14px;
+    }
+
+    .skillsform input[type=submit] {
+        font-size: 16px;
+    }
+
+    .fileicon {
+        font-size: 14px;
+    }
+}

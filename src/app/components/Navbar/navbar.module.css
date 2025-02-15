@@ -1,35 +1,87 @@
 .nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    backdrop-filter: blur(10px);
-    background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  backdrop-filter: blur(10px);
+  background-color: var(--primary-color);
+  position: fixed; /* Changed from absolute to fixed */
+  top: 0; /* Ensure it sticks to the top */
+  left: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.navList {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navList li a h3 {
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-family: 'Franklin Gothic';
+  width: 100px;
+  padding: 7px 0;
+  border-bottom: 1px solid #04ffc3;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #0a0a0a;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navList {
+    gap: 1.5rem; /* Reduce gap between items */
+  }
+
+  .navList li a h3 {
+    font-size: 16px; /* Reduce font size */
+    width: 80px; /* Reduce width */
+  }
+}
+
+@media (max-width: 480px) {
+  .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .navList {
+    display: none; /* Hide navbar links by default */
+    flex-direction: column; /* Stack items vertically */
+    gap: 0.5rem; /* Reduce gap further */
+    align-items: center; /* Center items */
     position: absolute;
+    top: 48px; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    z-index: 999; /* Ensure it's below the navbar */
+  }
 
+  .navList.open {
+    display: flex; /* Show navbar links when menu is open */
+  }
+
+  .navList li a h3 {
+    font-size: 14px; /* Further reduce font size */
+    width: 100%; /* Full width for better touch targets */
+    padding: 5px 0; /* Adjust padding */
+  }
 }
-
-.nav ul {
-    display: flex;
-
-    gap:3.5rem;
-
-
-}
-
-.nav ul li a h3{
-    font-size: 18px;
-    color: #fff;
-    letter-spacing: 0.5px;
-    font-family: 'Franklin Gothic';
-    width: 100px;
-    padding: 7px 0;
-    border-bottom: 1px solid #04ffc3;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    background-color: #0a0a0a;
-
-
-} 
